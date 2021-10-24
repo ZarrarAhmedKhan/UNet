@@ -45,7 +45,9 @@ If you have training data like img and its mask in same pic.and you want to sepe
 Use this script:
 
 > change the path of original_image (img + mask)
+
 > change the path of dist_img  (where you want to store img)
+
 > change the path of dist_mask (where you want to store img mask)
 
 *python3 seperate_mask.py*
