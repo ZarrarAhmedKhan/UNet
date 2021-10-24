@@ -1,0 +1,5 @@
+1. sperate mask from the image.
+
+image format : width = 1200 pixels , height = 600 pixels
+
+The result will be 1,097 color image pairs with the width and height of 256×256 pixels.
