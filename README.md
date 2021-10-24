@@ -1,5 +1,10 @@
 # U-Net: Convolutional Networks for Biomedical Image Segmentation
 
+## Theory
+
+### UNet Arhitecture
+
+[alt text](./pics/UNet architecture.png?raw=true)
 UNet is a convolution neural network which is the expanded by few changes in the CNN arhitecture.
 
 UNet is more than image classification. 'UNet is able to localize and distinguish borders is by doing classification on every pixels, so input and output share the same size.'
