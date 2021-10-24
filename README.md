@@ -22,7 +22,7 @@ Now I will define the both path seperately.
 
 This path follow like this
 
-conv_layer1 -> conv_layer2 -> max_pooling -> dropout(optional)
+*conv_layer1 -> conv_layer2 -> max_pooling -> dropout(optional)*
 
 Two conv layers plus max_pooling
 
@@ -32,6 +32,20 @@ In this path , the depth of the convolution layer is increaing and image size is
 
 This path follow like this
 
-conv_2d_transpose -> concatenate -> conv_layer1 -> conv_layer2
+*conv_2d_transpose -> concatenate -> conv_layer1 -> conv_layer2*
 
 Transposed convolution is an upsampling technique that expand the size of the image.
+
+## Coding
+
+###### seperate_mask.py
+
+If you have training data like img and its mask in same pic.and you want to seperate them.
+
+Use this script:
+
+> change the path of original_image (img + mask)
+> change the path of dist_img  (where you want to store img)
+> change the path of dist_mask (where you want to store img mask)
+
+*python3 seperate_mask.py*
