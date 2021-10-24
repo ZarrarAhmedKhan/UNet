@@ -18,7 +18,7 @@ The second phase is expansive path (which is constituted by transposed 2d convol
 
 Now I will define the both path seperately.
 
-*1. Contrcting Path:*
+>1. Contrcting Path:
 
 This path follow like this
 
@@ -28,7 +28,7 @@ Two conv layers plus max_pooling
 
 In this path , the depth of the convolution layer is increaing and image size is decreaing gradually.
 
-*2. Expansive Path:*
+>2. Expansive Path:
 
 This path follow like this
 
