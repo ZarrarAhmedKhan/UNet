@@ -4,7 +4,7 @@
 
 ### UNet Arhitecture
 
-![Alt Text](https://github.com/ZarrarAhmedKhan/UNet.git/pics/UNet_architecture.png?raw=true)
+![Test Image 1](https://github.com/ZarrarAhmedKhan/UNet.git/pics/UNet_architecture.png 112)
 
 UNet is a convolution neural network which is the expanded by few changes in the CNN arhitecture.
 
