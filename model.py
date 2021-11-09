@@ -8,8 +8,14 @@ from keras.layers import *
 from keras.optimizers import *
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from keras import backend as keras
+<<<<<<< HEAD
+from tensorflow.keras.optimizers import Adam
+
+def unet(pretrained_weights = None,input_size = (256,256,3)):
+=======
 
 def unet(pretrained_weights = None,input_size = (256,256,1)):
+>>>>>>> 150aec0dbca4518933e6da9e1357e8e82b8c2f12
     inputs = Input(input_size)
     conv1 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(inputs)
     conv1 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv1)
@@ -48,6 +54,16 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
     merge9 = concatenate([conv1,up9], axis = 3)
     conv9 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(merge9)
     conv9 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv9)
+<<<<<<< HEAD
+    conv9 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv9)
+    conv10 = Conv2D(3, 1, activation = 'sigmoid')(conv9)
+
+    model = Model(inputs = inputs, outputs = conv10)
+
+    model.compile(optimizer = Adam(lr = 1e-4), loss = 'binary_crossentropy', metrics = ['accuracy'])
+    
+    model.summary()
+=======
     conv9 = Conv2D(2, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv9)
     conv10 = Conv2D(1, 1, activation = 'sigmoid')(conv9)
 
@@ -56,6 +72,7 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
     model.compile(optimizer = Adam(lr = 1e-4), loss = 'binary_crossentropy', metrics = ['accuracy'])
     
     #model.summary()
+>>>>>>> 150aec0dbca4518933e6da9e1357e8e82b8c2f12
 
     if(pretrained_weights):
     	model.load_weights(pretrained_weights)
